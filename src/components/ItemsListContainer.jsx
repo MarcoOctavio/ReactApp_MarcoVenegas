@@ -15,10 +15,7 @@ const ItemListContainer = ({ greeting, texto }) => {
       </div>
       <div className="row justify-content-center mt-4">
         <div className="contenedor-imagen">
-        <img
-            src={faktary}
-            alt="Pancito humeante"
-            className="imgen1"/>
+        <img src={faktary} alt="Pancito humeante" className="imgen1"/>
         </div>
       </div>
     </div>
