@@ -19,6 +19,10 @@
     text-decoration: none;
     cursor: pointer;
   } 
+
+  .navbarLogo{
+    width: 8rem;
+  }
   
   .cartWidgetContainer{
     display: flex;

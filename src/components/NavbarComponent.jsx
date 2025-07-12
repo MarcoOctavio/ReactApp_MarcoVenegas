@@ -3,7 +3,7 @@ import CarWidget from "./CarWidget"
 const NavbarComponent = () =>{
     return(
         <nav className="navContainer">
-            <a className='aLink'>Fantasy Ferment Shop</a>
+            <img className="navbarLogo" src="../FantasyLogo.png" alt="Logo" />
             <a className='aLink'>Cerveza</a>
             <a className='aLink'>Hidromiel</a>
             <a className="aLink">Sidra</a>
