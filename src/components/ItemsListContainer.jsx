@@ -1,4 +1,3 @@
-// src/components/ItemListContainer.jsx
 import React from 'react';
 import faktary from '../assets/faktary.png';
  
