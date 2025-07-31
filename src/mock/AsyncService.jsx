@@ -183,6 +183,7 @@ const productos = [
   
 
 export const gerProducts = () => {
+  let error = false // Cambia a true para simular un error
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if(error) {

@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import faktary from '../assets/faktary.png';
+import { gerProducts } from '../mock/AsyncService';
+import ItemList from './ItemList';
  
 const ItemListContainer = ({ greeting, texto }) => {
+
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    gerProducts()
+    .then((res)=> setData(res))
+    .catch((error) => console.error(error));
+  }, []);
+console.log(data, 'data')
   return (
     <div className="container mt-5">
       <div className="row justify-content-center">
@@ -17,7 +28,9 @@ const ItemListContainer = ({ greeting, texto }) => {
         <img src={faktary} alt="Pancito humeante" className="imgen1"/>
         </div>
       </div>
+      <ItemList data={data}/>
     </div>
+    
   );
 };
  

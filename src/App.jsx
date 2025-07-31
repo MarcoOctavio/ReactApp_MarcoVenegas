@@ -11,9 +11,10 @@ function App() {
       <NavbarComponent/>
       <Routes>
         <Route path='/' element={<ItemListContainer greeting='Hola y bienvenidos a Fantasy Ferment Shop'/>}/>
+        
       </Routes>
       
    </BrowserRouter>
   )
 }
-export default App
+export default App 
