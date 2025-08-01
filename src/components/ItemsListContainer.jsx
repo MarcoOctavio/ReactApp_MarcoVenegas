@@ -1,18 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import faktary from '../assets/faktary.png';
-import { gerProducts } from '../mock/AsyncService';
+import { getProducts } from '../mock/AsyncService';
 import ItemList from './ItemList';
+import { useParams } from 'react-router-dom';
  
 const ItemListContainer = ({ greeting, texto }) => {
 
   const [data, setData] = useState([])
-
+  const{category}= useParams()
+  
   useEffect(() => {
-    gerProducts()
-    .then((res)=> setData(res))
+    getProducts()
+    .then((res)=> {
+      if(category){
+        setData(res.filter((prod)=> prod.category == category))
+      }else{
+        setData(res)
+      }
+    })
     .catch((error) => console.error(error));
-  }, []);
+  }, [category]);
 console.log(data, 'data')
+
   return (
     <div className="container mt-5">
       <div className="row justify-content-center">

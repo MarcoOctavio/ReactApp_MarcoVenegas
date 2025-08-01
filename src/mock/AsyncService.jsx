@@ -182,7 +182,7 @@ const productos = [
   ];
   
 
-export const gerProducts = () => {
+export const getProducts = () => {
   let error = false // Cambia a true para simular un error
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -194,3 +194,16 @@ export const gerProducts = () => {
         }, 2000);
     });
 };
+
+export const getOneProduct = (id) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+        const oneproduct = productos.find((product) => product.id === id);
+        if(oneproduct) {
+            resolve(oneproduct);
+        }else {
+            reject('Producto no encontrado');
+        }
+    }, 2000)
+  })
+}

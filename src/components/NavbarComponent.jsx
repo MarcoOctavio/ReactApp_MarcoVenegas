@@ -1,17 +1,18 @@
-import { Nav, NavLink } from "react-bootstrap"
+import { Nav, Navbar } from "react-bootstrap"
 import CarWidget from "./CarWidget"
+import { NavLink } from "react-router-dom"
 
 const NavbarComponent = () =>{
     return(
         <nav className="navContainer">
-            <NavLink to='/'>
-                <img className="navbarLogo" src="../FantasyLogo.png" alt="Logo" />
-            </NavLink>
-            <NavLink to='/category/cerveza' className="navLink">Cerveza</NavLink>
-            <NavLink to='/category/hideomiel' className="navLink">Hidromiel</NavLink>
-            <NavLink to='/category/sidra' className="navLink">Sidra</NavLink>
-            <NavLink to='/category/vino' className="navLink">Vino</NavLink>
-            <NavLink to='/category/top10' className="navLink">Productos top 10</NavLink>
+            <Navbar.Brand as={NavLink} to='/'>
+                <img className="navbarLogo" src='/FantasyLogo.png' alt="Logo"/>
+            </Navbar.Brand>
+            <NavLink to='/categories/Cerveza' className="navLink">Cerveza</NavLink>
+            <NavLink to='/categories/Hidromiel' className="navLink">Hidromiel</NavLink>
+            <NavLink to='/categories/Sidra' className="navLink">Sidra</NavLink>
+            <NavLink to='/categories/Vino' className="navLink">Vino</NavLink>
+            <NavLink to='/categories/Top 10' className="navLink">Productos top 10</NavLink>
             <CarWidget counter={15}/>
         </nav>
     )
