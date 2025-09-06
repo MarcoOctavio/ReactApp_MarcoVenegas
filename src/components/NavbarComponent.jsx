@@ -1,8 +1,11 @@
 import { Nav, Navbar } from "react-bootstrap"
-import CarWidget from "./CarWidget"
+import CartIcon from "./CartIcon"
 import { NavLink } from "react-router-dom"
+import { useContext } from "react"
+import { CartContext } from "../context/CartContext"
 
 const NavbarComponent = () =>{
+    const {cart}= useContext(CartContext)
     return(
         <nav className="navContainer">
             <Navbar.Brand as={NavLink} to='/'>
@@ -12,8 +15,10 @@ const NavbarComponent = () =>{
             <NavLink to='/categories/Hidromiel' className="navLink">Hidromiel</NavLink>
             <NavLink to='/categories/Sidra' className="navLink">Sidra</NavLink>
             <NavLink to='/categories/Vino' className="navLink">Vino</NavLink>
-            <NavLink to='/categories/Top 10' className="navLink">Productos top 10</NavLink>
-            <CarWidget counter={15}/>
+            <NavLink to='/categories/Top10' className="navLink">Productos top 10</NavLink>
+            <NavLink to='/cart' style={{ textDecoration: 'none', color: 'inherit' }}>
+  <CartIcon />
+</NavLink>
         </nav>
     )
 }

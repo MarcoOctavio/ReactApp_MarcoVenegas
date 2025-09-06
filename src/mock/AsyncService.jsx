@@ -158,7 +158,7 @@ const productos = [
       description: 'IPA de alta gama con lúpulos seleccionados.',
       price: 150,
       stock: 20,
-      category: 'Top 10',
+      category: 'Top10',
       img: '',
     },
     {
@@ -167,7 +167,7 @@ const productos = [
       description: 'Vino tinto premium con crianza prolongada.',
       price: 500,
       stock: 10,
-      category: 'Top 10',
+      category: 'Top10',
       img: '',
     },
     {
@@ -176,7 +176,7 @@ const productos = [
       description: 'Hidromiel de edición limitada con miel de alta calidad.',
       price: 200,
       stock: 15,
-      category: 'Top 10',
+      category: 'Top10',
       img: '',
     },
   ];
@@ -207,3 +207,5 @@ export const getOneProduct = (id) => {
     }, 2000)
   })
 }
+
+export default productos;
