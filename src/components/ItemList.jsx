@@ -5,7 +5,7 @@ const ItemList = ({data}) => {
   return (
     <div style={
         {display: 'flex', 
-        justifyContent: 'center', flexWrap: 'wrap', gap: '20px', flexWrap:'wrap'}}>
+        justifyContent: 'center', flexWrap: 'wrap', gap: '20px'}}>
       {data.map((prod)=> <Item key={prod.id} prod={prod}/>)}
     </div>
   )
